@@ -1,2 +1,5 @@
-function[Map] = MapGeneration(n)
-Map = zeros(n, n);
+function[Map] = MapGeneration(nodes, Numstates)
+Map = zeros(nodes, nodes);
+
+    
+    
