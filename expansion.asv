@@ -1,0 +1,30 @@
+function[Map] = expansion(n, states)
+skeleton = MapGeneration(n, states);
+
+for i=1:n
+    for j=1:n
+        if (skeleton(i, j) ~= 0)
+            randneighbor = randi(4);
+            %if RN = 1 --> j-1
+            if randneighbor == 1
+                if (j~=1)
+                    if (skeleton(i, j-1) == 0)
+                        skeleton(i, j-1) = skeleton(i, j)
+                    end
+
+                end
+                
+            if randneighbor == 2
+                if (j~=n)
+                    if (skeleton(i, j+1) == 0)
+                        skeleton(i, j+1) = skeleton(i, j)
+                    end
+                        
+                end
+            end
+            
+        end
+        
+        
+    end
+end
