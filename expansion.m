@@ -40,3 +40,4 @@ for h=1:n^2
         end
     end
 end
+imagesc(Map)
