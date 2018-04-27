@@ -1,13 +1,20 @@
 function[v] = greedyColors(n, states)
 Map=expansion(n, states);
-A=makeAdj(n, states);
+A=makeAdj(n, states)
 v=zeros(1,states); %empty vector that will be filled in with colors
-randx = randi(states);
-randy = randi(states);
-v(randx, randy) = 1; %assigning color 1 to a random starting node
-for i=1:states
-    for j=1:states
-        
-    end    
+%randx = randi(states);
+%randy = randi(states);
+colorList = zeros(1, states);
+v(1, 1) = 1; %assigning color 1 to a random starting node
+for i=1:states % go through all states
+    for j=1:states % goes through column of neighbors for each state in A
+         if (A(i, j) == 1)
+             colorList(1, j) = v(1, j);             
+         end
+    end
+    color = min(setdiff(1:states, colorList)); %intersection of sets
+    v(1, i) = color;
 end
+A;
+v
 
