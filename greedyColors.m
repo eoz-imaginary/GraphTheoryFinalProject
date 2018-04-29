@@ -7,7 +7,7 @@ v(1, 1) = 1; %assigning color 1 to a random starting node
 for i=1:states % go through all states
     for j=1:states % goes through column of neighbors for each state in A
          if (A(i, j) == 1)
-             colorList(1, j) = v(1, j)             
+             colorList(1, j) = v(1, j);             
          end
     end
     color = min(setdiff(1:states, colorList)); %intersection of sets
