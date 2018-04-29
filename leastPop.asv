@@ -9,14 +9,14 @@ v(1, index(1)) = 1;
 degSum(index(1)) = [];
 for i=1:states
     for j = 1:states
-        index = find(degSum==min(degSum)); %index of lowest degree node
-        if (A(j) == index)
-            colorList(1, j) = v(1, j); 
-            degSum = degSum(index(1)) = [];
+        index = find(degSum==min(degSum)); %index of lowest degree node  
+        if ((A(i, j) == 1)             
+            colorList(1, j) = v(1, j);            
         end       
     end    
-    color = min(setdiff(1:states, colorList)); %intersection of sets
-    v(1, i) = color;
+    color = min(setdiff(1:states, colorList)) %intersection of sets
+    
+    v(1, index(1)) = color;
 end
 
 
