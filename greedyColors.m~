@@ -12,7 +12,8 @@ for i=1:states % go through all states
     end
     color = min(setdiff(1:states, colorList)); %intersection of sets
     v(1, i) = color;
-    colorList=zeros(1,states);
 end
+A;
+v
 
 
