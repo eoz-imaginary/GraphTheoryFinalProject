@@ -1,5 +1,5 @@
 function[v] = greedyColors(n, states)
-Map=expansion(n, states);
+
 A=makeAdj(n, states)
 v=zeros(1,states); %empty vector that will be filled in with colors
 colorList = zeros(1, states);
