@@ -11,9 +11,8 @@ for i=1:states % go through all states
          end
     end
     color = min(setdiff(1:states, colorList)); %intersection of sets
-    v(1, i) = color;
+    v(1, i) = color; %assigns lowest color not used by neighbors
+    colorList=zeros(1,states); %resets colorList
 end
-A;
-v
 
 
