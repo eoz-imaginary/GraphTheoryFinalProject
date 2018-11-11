@@ -1,2 +1,2 @@
-# GraphTheoryFinalProject
-Generating planar graphs in MATlab
+# Graph Theory - Final Project
+This program generates random planar graphs using MATLab. 
